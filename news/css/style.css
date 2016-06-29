@@ -1,0 +1,115 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0 0 0 0;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+}
+
+.heading{
+    width: 100%;
+}
+
+.heading .titleContainer{
+    padding-top: 1%;
+    width: 100%;
+    text-align: center;
+}
+
+.items{
+    width: 100%;
+}
+
+.items .textContainer{
+    margin-top: 5%;
+    width: 100%;
+    text-align: justify;
+}
+
+.items .imageContainer{
+    width: 100%;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.items .imageContainer .image{
+    width: 100%;
+}
+
+@media screen and (orientation: portrait) {
+
+    .newspaper {
+        -webkit-column-count: 3; /* Chrome, Safari, Opera */
+        -moz-column-count: 3; /* Firefox */
+        column-count: 3;
+        width: 99%;
+        margin: auto;
+    }
+
+    span.header{
+        font-weight: bold;
+        font-size: 300%;
+        font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    }
+
+    span.text{
+        font-size: medium;
+        font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    }
+
+    span.date{
+        font-weight: bold;
+        font-size: small;
+        font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    }
+
+    span.title{
+        font-weight: bold;
+        font-size: x-large;
+        font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    }
+
+}
+
+@media screen and (orientation: landscape) {
+
+    .newspaper {
+        -webkit-column-count: 5; /* Chrome, Safari, Opera */
+        -moz-column-count: 5; /* Firefox */
+        column-count: 5;
+        width: 99%;
+        margin: auto;
+    }
+
+    span.header{
+        font-weight: bold;
+        font-size: 400%;
+        font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    }
+
+    span.text{
+        font-size: large;
+        font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    }
+
+    span.date{
+        font-weight: bold;
+        font-size: medium;
+        font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    }
+
+    span.title{
+        font-weight: bold;
+        font-size: xx-large;
+        font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    }
+
+}

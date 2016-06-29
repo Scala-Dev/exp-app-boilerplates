@@ -1,0 +1,69 @@
+{
+  "name": "Slideshow",
+  "icon": "image-area",
+  "background": "green",
+  "configTypes": [
+    {
+      "name": "duration",
+      "type": "number",
+      "min": 2,
+      "label": "Image Duration (seconds)",
+      "required": true,
+      "path": "duration"
+    },
+    {
+      "name": "transition",
+      "type": "select",
+      "label": "Transition",
+      "required": true,
+      "path": "transition.name",
+      "options": [
+        {
+          "label": "Cube",
+          "value": "cube"
+        },
+        {
+          "label": "Slide",
+          "value": "slide"
+        },
+        {
+          "label": "Poster",
+          "value": "poster"
+        },
+        {
+          "label": "Fade",
+          "value": "fade"
+        }
+      ]
+    },
+    {
+      "name": "addAny",
+      "type": "appArray",
+      "multiItem": true,
+      "label": "Add Media",
+      "required": true,
+      "path": "slides"
+    },
+    {
+      "name":"backgroundColor",
+      "type":"color",
+      "label":"Background Color",
+      "required":false,
+      "path":"backgroundColor"
+    },
+    {
+      "name":"viewportColor",
+      "type":"color",
+      "label":"Viewport Color For Cube Transform",
+      "required":false,
+      "path":"viewportColor"
+    }
+  ],
+  "config": {
+    "slides": [],
+    "transition": { "name": "slide" },
+    "duration": 10,
+    "backgroundColor": "#000000",
+    "viewportColor": "#FFFFFF"
+  }
+}

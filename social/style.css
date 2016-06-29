@@ -1,0 +1,142 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  fill: #fff;
+  background-color: mediumpurple;
+  padding: 0;
+  margin: 0;
+}
+
+#title {
+  display: flex;
+  font-size: 3em;
+  padding: .333333333333336em;
+  padding-bottom: 0;
+  align-items: center;
+}
+
+#title img {
+  max-height: 2em;
+}
+
+#title span, #title img {
+  vertical-align: middle;
+  padding-right: .333333333333336em;
+}
+
+#container {
+  padding: .5em;
+}
+
+#grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid-sizer,
+.grid-item {
+  width: 25%;
+}
+
+.col-1 .grid-sizer, .col-1 .grid-item { width: 100%; }
+.col-2 .grid-sizer, .col-2 .grid-item { width: 50%; }
+.col-3 .grid-sizer, .col-3 .grid-item { width: 33.333333333333336%; }
+.col-4 .grid-sizer, .col-4 .grid-item { width: 25%; }
+.col-5 .grid-sizer, .col-5 .grid-item { width: 20%; }
+.col-6 .grid-sizer, .col-6 .grid-item { width: 16.666666666666668%; }
+.col-7 .grid-sizer, .col-7 .grid-item { width: 14.285714285714286%; }
+.col-8 .grid-sizer, .col-8 .grid-item { width: 12.5%; }
+.col-9 .grid-sizer, .col-9 .grid-item { width: 11.11111111111111%; }
+.col-10 .grid-sizer, .col-10 .grid-item { width: 10%; }
+
+.grid-item {
+  padding:.5em;
+  float: left;
+}
+
+.item {
+  background: rgba(255, 255, 255, .3);
+  padding-bottom: .5em;
+}
+
+.caption:first-line {
+  font-size: 1.5em;
+}
+.caption {
+  padding: .5em .5em 1em .5em;
+  font-size: 1.25em;
+  word-wrap: break-word;
+}
+
+.col-1 .caption:first-line { font-size: 2.25em; }
+.col-2 .caption:first-line { font-size: 2em; }
+.col-3 .caption:first-line { font-size: 1.75em; }
+.col-4 .caption:first-line { font-size: 1.5em; }
+.col-5 .caption:first-line { font-size: 1.25em; }
+.col-6 .caption:first-line { font-size: 1em; }
+.col-7 .caption:first-line { font-size: .75em; }
+.col-8 .caption:first-line { font-size: .5em; }
+.col-9 .caption:first-line { font-size: .25em; }
+.col-10 .caption:first-line { font-size: .25em; }
+
+.col-1 .caption { font-size: 2em; }
+.col-2 .caption { font-size: 1.75em; }
+.col-3 .caption { font-size: 1.5em; }
+.col-4 .caption { font-size: 1.25em; }
+.col-5 .caption { font-size: 1em; }
+.col-6 .caption { font-size: 1em; }
+.col-7 .caption { font-size: .75em; }
+.col-8 .caption { font-size: .5em; }
+.col-9 .caption { font-size: .25em; }
+.col-10 .caption { font-size: .25em; }
+
+.quote {
+  padding: 1em;
+  text-align: center;
+  font-size: 2.5em;
+  word-wrap: break-word;
+}
+
+.col-1 .quote { font-size: 3em; }
+.col-2 .quote { font-size: 2.75em; }
+.col-3 .quote { font-size: 2.5em; }
+.col-4 .quote { font-size: 2.25em; }
+.col-5 .quote { font-size: 2em; }
+.col-6 .quote { font-size: 1.75em; }
+.col-7 .quote { font-size: 1.75em; }
+.col-8 .quote { font-size: 1.5em; }
+.col-9 .quote { font-size: 1.25em; }
+.col-10 .quote { font-size: 1em; }
+
+.item img, .item video, .item iframe {
+  display: block;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.footer {
+  font-size: .75em;
+  padding: 0 .75em;
+  height: 2em;
+  line-height: 2em;
+}
+
+.footer svg {
+  float: right;
+}
+

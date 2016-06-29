@@ -1,0 +1,57 @@
+{
+   "name":"Meeting Room App",
+   "icon":"calendar-active",
+   "description":"Displays calendar meetings from calendar feed.",
+   "background":"green",
+   "configTypes":[
+      {
+         "name":"feed",
+         "type":"feed",
+         "label":"Calendar Feed",
+         "required":true,
+         "path":"feed",
+         "supportedTypes": ["scala:feed:google", "scala:feed:outlook"]
+      },
+      {
+         "name": "logo",
+         "type": "image",
+         "multiItem": false,
+         "label": "Logo",
+         "required": false,
+         "path": "logo"
+      },
+      {
+         "name":"roomName",
+         "type":"text",
+         "label":"Title",
+         "required":false,
+         "path":"roomName"
+      },
+      {
+         "name":"primaryColor",
+         "type":"color",
+         "label":"Primary Color",
+         "required":false,
+         "path":"primaryColor"
+      },
+      {
+         "name":"secondaryColor",
+         "type":"color",
+         "label":"Secondary Color",
+         "required":false,
+         "path":"secondaryColor"
+      },
+      {
+         "name":"refreshInterval",
+         "type":"number",
+         "min": 2,
+         "label":"Refresh Rate (seconds)",
+         "required":false,
+         "path":"refreshInterval"
+      }
+   ],
+   "config":{
+      "primaryColor": "#7E57C2",
+      "secondaryColor": "#ffffff"
+   }
+}

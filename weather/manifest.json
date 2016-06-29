@@ -1,0 +1,117 @@
+{
+  "name":"Weather App",
+  "icon":"weather-partlycloudy",
+  "description":"Displays a weather feed from wunderground.",
+  "background":"yellow",
+  "configTypes":[
+    {
+      "name":"feedId",
+      "type":"feed",
+      "label":"Feed",
+      "required":true,
+      "path":"feedConfiguration",
+      "supportedTypes": [ "scala:feed:weather" ]
+    },
+    {
+      "name":"logoId",
+      "type":"image",
+      "fileTypes":"image/*",
+      "label":"Add Logo",
+      "required":false,
+      "multiItem": false,
+      "path":"logo"
+    },
+    {
+      "name":"titleTextId",
+      "type":"text",
+      "label":"Title",
+      "required":false,
+      "path":"titleText"
+    },
+    {
+      "name":"primaryColorId",
+      "type":"color",
+      "label":"Primary Color",
+      "required":true,
+      "path":"primaryColor"
+    },
+    {
+      "name":"textColorId",
+      "type":"color",
+      "label":"Secondary Color",
+      "required":true,
+      "path":"textColor"
+    },
+    {
+      "name":"temperatureID",
+      "type":"select",
+      "label":"Temperature",
+      "required":true,
+      "path":"temperature",
+      "options":[
+        {
+          "label":"Celsius",
+          "value":"c"
+        },
+        {
+          "label":"Fahrenheit",
+          "value":"f"
+        }
+      ]
+    },
+    {
+      "name":"measurementsId",
+      "type":"select",
+      "label":"Measurements",
+      "required":true,
+      "path":"measurements",
+      "options":[
+        {
+          "label":"Metric",
+          "value":"metric"
+        },
+        {
+          "label":"Standard",
+          "value":"imperial"
+        }
+      ]
+    },
+    {
+      "name":"dateFormatId",
+      "type":"select",
+      "label":"Date Format",
+      "required":true,
+      "path":"dateFormat",
+      "options":[
+        {
+          "label":"Day of Week (Sunday - Saturday)",
+          "value":"EEEE"
+        },
+        {
+          "label":"US Date, (MM/DD/YYYY)",
+          "value":"MM/dd/yyyy"
+        },
+        {
+          "label":"EU Date (DD-MM-YYYY)",
+          "value":"dd-MM-yyyy"
+        }
+      ]
+    },
+    {
+      "name":"refreshRateSecondsId",
+      "type":"number",
+      "min": 2,
+      "label":"Refresh Rate (seconds)",
+      "required":true,
+      "path":"refreshRateSeconds"
+    }
+  ],
+  "config":{
+    "primaryColor": "#7E57C2",
+    "textColor": "#ffffff",
+    "temperature": "f",
+    "measurements": "imperial",
+    "dateFormat": "MM/dd/yyyy",
+    "refreshRateSeconds": 600
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "name":"News App",
+  "icon":"newspaper",
+  "description":"Displays news information from RSS feeds.",
+  "background":"red",
+  "configTypes":[
+    {
+      "name":"feedId",
+      "type":"feed",
+      "label":"Feed",
+      "required":true,
+      "path":"feedConfiguration",
+      "supportedTypes": [ "scala:feed:rss" ]
+    },
+    {
+      "name":"logoId",
+      "type":"image",
+      "fileTypes":"image/*",
+      "label":"Add Logo",
+      "required":false,
+      "multiItem": false,
+      "path":"logo"
+    },
+    {
+      "name":"titleTextId",
+      "type":"text",
+      "label":"Title",
+      "required":false,
+      "path":"titleText"
+    },
+    {
+      "name":"primaryColorId",
+      "type":"color",
+      "label":"Primary Color",
+      "required":true,
+      "path":"primaryColor"
+    },
+    {
+      "name":"SecondaryColorId",
+      "type":"color",
+      "label":"Secondary Color",
+      "required":true,
+      "path":"SecondaryColor"
+    },
+    {
+      "name":"refreshRateSecondsId",
+      "type":"number",
+      "min": 2,
+      "label":"Refresh Rate (seconds)",
+      "required":true,
+      "path":"refreshRateSeconds"
+    }
+  ],
+  "config":{
+    "primaryColor": "#F5F5DC",
+    "SecondaryColor": "#000000",
+    "refreshRateSeconds": 60
+  }
+}

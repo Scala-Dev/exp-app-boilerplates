@@ -1,0 +1,13 @@
+
+
+[exp-app] {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 1s;
+          transition: opacity 1s;
+}
+
+[exp-app][status="playing"]{
+  opacity: 1;
+  filter: alpha(opacity=100);
+}

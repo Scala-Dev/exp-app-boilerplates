@@ -1,0 +1,62 @@
+
+body {
+  font-family: Roboto:300;
+}
+
+#days {
+  overflow-y: scroll;
+  background: rgba(255, 255, 255, .2);
+}
+
+.seperator {
+  height: 2px;
+}
+
+.day .name {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+.event {
+  font-size: 17px;
+  text-align: center;
+}
+
+
+#in-progress{
+  text-transform: uppercase;
+  font-size:24px;
+  font-style: italic;
+}
+
+
+#title {
+  text-transform: uppercase;
+  font-size: 24px;
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#time {
+  font-size: 64px;
+  padding: 4px;
+}
+#date {
+  font-size: 32px;
+  padding: 4px;
+}
+
+#current {
+  width: 100%;
+  font-size: 36px;
+  padding: 36px;
+}
+
+
+#logo {
+  max-width: 75%;
+  max-height: 25%;
+}

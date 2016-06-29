@@ -1,0 +1,79 @@
+{
+  "name":"Menu Board App",
+  "icon":"menu",
+  "description":"Displays POS data from POS feed.",
+  "configTypes":[
+    {
+      "name":"feed",
+      "type":"feed",
+      "label":"Feed",
+      "required":true,
+      "path":"feed_configuration",
+      "supportedTypes": [ "scala:feed:square","scala:feed:shopify" ]
+    },
+    {
+      "name": "logo",
+      "type": "image",
+      "multiItem": false,
+      "label": "Add Logo",
+      "required": false,
+      "path": "logo"
+    },
+    {
+      "name":"title",
+      "type":"text",
+      "label":"Title",
+      "required":false,
+      "path":"title"
+    },
+    {
+      "name":"primaryColor",
+      "type":"color",
+      "label":"Primary Color",
+      "required":true,
+      "path":"primaryColor"
+    },
+    {
+      "name":"secondaryColor",
+      "type":"color",
+      "label":"Secondary Color",
+      "required":true,
+      "path":"secondaryColor"
+    },
+    {
+      "name":"numberColumns",
+      "type":"select",
+      "label":"Number of Columns",
+      "required":true,
+      "path":"numberColumns",
+      "options":[
+        {
+          "label":"1",
+          "value":1
+        },
+        {
+          "label":"2",
+          "value":2
+        },
+        {
+          "label":"3",
+          "value":3
+        }
+      ]
+    },
+    {
+      "name":"refreshRateSecondsId",
+      "type":"number",
+      "min": 2,
+      "label":"Refresh Rate (seconds)",
+      "required":true,
+      "path":"refreshRateSeconds"
+    }
+  ],
+   "config":{
+    "primaryColor": "#7E57C2",
+    "secondaryColor": "#ffffff",
+    "numberColumns": 1,
+    "refreshRateSeconds": 600
+   }
+}
