@@ -1,0 +1,37 @@
+.main_container{
+    height: 100%;
+    width: 100%;
+}
+
+.tool_bar{
+    height: 5%;
+    width: 100%;
+}
+
+.image_container{
+    height: 100%;
+    padding-right: 2%;
+}
+
+.title_container{
+    padding-left: 2%;
+}
+
+.image_container .image{
+    height: 40%;
+}
+
+.content_container{
+    width: 100%;
+    height: 100%;
+}
+
+.tile_content{
+    width: 95%;
+    height:95%;
+    color: white;
+}
+
+.footer_container{
+    width: 100%;
+}

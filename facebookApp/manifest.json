@@ -1,0 +1,27 @@
+{
+  "name":"Facebook App",
+  "icon":"web",
+  "description":"display post information from facebook page",
+  "background":"blue",
+  "configTypes":[
+    {
+      "name":"feed",
+      "type":"feed",
+      "label":"Facebook Feed",
+      "required":true,
+      "path":"feed",
+      "supportedTypes": ["scala:feed:facebook"]
+    },
+    {
+      "name":"refreshRateSeconds",
+      "type":"number",
+      "min": 2,
+      "label":"Refresh Rate (seconds)",
+      "required":true,
+      "path":"refreshRateSeconds"
+    }
+  ],
+  "config":{
+    "refreshRateSeconds": 600
+  }
+}
