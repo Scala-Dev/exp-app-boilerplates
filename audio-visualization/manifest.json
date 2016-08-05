@@ -1,0 +1,25 @@
+{
+  "name": "Audio App",
+  "icon": "library-music",
+  "background": "purple",
+  "configTypes": [
+    {
+      "name": "audio",
+      "type": "audio",
+      "multiItem": false,
+      "label": "Add Audio",
+      "required": true,
+      "path": "content"
+    },
+    {
+      "name": "background",
+      "type": "image",
+      "multiItem": false,
+      "label": "Add Background Image",
+      "required": false,
+      "path": "background"
+    }
+  ],
+  "config": {
+  }
+}
