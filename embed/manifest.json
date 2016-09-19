@@ -1,4 +1,17 @@
 {
-   "name":"URL Experience",
-   "icon":"web"
+   "name":"URL Player",
+   "icon":"web",
+   "background": "pink",
+    "configTypes": [
+        {
+          "name": "url",
+          "type": "content",
+          "label": "Add URL",
+          "required": true,
+          "path": "content",
+          "restriction": ["url"]
+        }
+    ],
+    "config": {}
+    }
 }

@@ -19,9 +19,16 @@ function unload () {
 function load () {
   video = document.getElementById('video');
   return Promise.resolve().then(function () {
+
+    // If loop wasn't explicitly set. Infer from playback context.
+    if (exp.app.config.loop !== true && exp.app.config.loop !== false) {
+      exp.app.config.loop = !exp.app.context.once;
+    }
+    
     if (exp.app.config.loop) {
       video.setAttribute('loop', ' ');
     }
+
     if (exp.app.config.url) {
       return exp.app.config.url;
     } else if (exp.app.config.content && exp.app.config.content.uuid) {
@@ -45,4 +52,9 @@ function load () {
       video.addEventListener('canplaythrough', resolve);
     });
   });
+}
+
+
+function stop () {
+  video.volume = 0;
 }

@@ -27,9 +27,11 @@ transitions.cube = function (app) {
       '100%': { transform:  'scale(' + scale + ') rotateY(-90deg)' }
     }]);
   };
+
   this.prepare = function (app) {
     $(app.element).css('visibility', 'hidden');
   };
+
   this.execute  = function (current, next) {
     if (!current) {
       return $(next.element).css('visibility', 'visible').css('transform', 'rotateY(90deg) translateX(-50%) rotateY(-90deg)');
@@ -52,9 +54,6 @@ transitions.cube = function (app) {
   this.name = 'cube';
   this.refresh();
   $.keyframe.debug = true;
-
-
-
 
 };
 

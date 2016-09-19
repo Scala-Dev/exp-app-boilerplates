@@ -1,4 +1,18 @@
 {
-   "name":"Youtube Player",
-   "icon":"youtube-play"
+  "name":"Youtube App",
+  "icon":"youtube-play",
+  "background": "red",
+  "configTypes": [
+    {
+      "name": "youtube",
+      "type": "content",
+      "multiItem": false,
+      "label": "Add YouTube Video",
+      "required": true,
+      "path": "content",
+      "restriction": ["youtube"]
+    }
+  ],
+  "config": {
+  }
 }
