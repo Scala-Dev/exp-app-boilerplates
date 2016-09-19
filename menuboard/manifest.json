@@ -12,12 +12,12 @@
       "supportedTypes": [ "scala:feed:square","scala:feed:shopify" ]
     },
     {
-      "name": "logo",
-      "type": "image",
-      "multiItem": false,
-      "label": "Add Logo",
-      "required": false,
-      "path": "logo"
+       "name": "logo",
+       "type": "image",
+       "multiItem": false,
+       "label": "Add Logo",
+       "required": false,
+       "path": "logo"
     },
     {
       "name":"title",

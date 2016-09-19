@@ -1,5 +1,8 @@
 [app][transition="poster"]{
-    opacity: 1;
+  opacity: 1;
+}
+
+[app][transition="poster"]:not([first]){
   -webkit-transform: translateY(100%);
       -ms-transform: translateY(100%);
           transform: translateY(100%);

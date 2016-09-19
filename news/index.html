@@ -8,7 +8,7 @@
   <script type="text/javascript" src="vendor/vue.min.js"></script>
   <script type="text/javascript" src="vendor/moment.min.js"></script>
   <script type="text/javascript" src="vendor/vue-moment.min.js"></script>
-  <script type="text/javascript" src="scripts/main.js"></script>
+  <script type="text/javascript" src="main.js"></script>
 </head>
 <body id="newsApp" style="{{ style }}">
 <div class="container">
@@ -35,25 +35,15 @@
         <span class="date">{{ item.date | moment "dddd, MMMM Do YYYY" }}</span>
       </div>
       <div>
-        <span class="title">{{{ item.raw.title }}}</span>
+        <span class="title">{{{ item.text }}}</span>
       </div>
       <template v-if="item.images.length !== 0">
         <div class="imageContainer">
           <img v-bind:src="item.images[0].url" class="image">
         </div>
       </template>
-      <template v-if="item.raw.hasOwnProperty('media:content')">
-        <div class="imageContainer" >
-          <img v-bind:src="item.raw['media:content'][0]['$'].url" class="image" v-if="item.raw['media:content'][0]['$'].url">
-        </div>
-      </template>
-      <template v-if="item.raw.hasOwnProperty('media:thumbnail') && (item.raw.hasOwnProperty('media:content') === false)">
-        <div class="imageContainer">
-          <img v-bind:src="item.raw['media:thumbnail'][0]['$'].url" class="image" v-if="item.raw['media:thumbnail'][0]['$'].url">
-        </div>
-      </template>
       <div class="textContainer">
-        <span class="text">{{{ item.text }}}</span>
+        <span class="text">{{{ item.metadata.description }}}</span>
       </div>
       <div>
         <hr style="{{ lineColor }}" size="3" noshade>

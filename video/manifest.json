@@ -1,4 +1,17 @@
 {
-   "name": "Video Player",
-   "icon": "video"
+  "name": "Video App",
+  "icon": "video",
+  "background": "deep-purple",
+  "configTypes": [
+    {
+       "name": "video",
+       "type": "video",
+       "multiItem": false,
+       "label": "Add Video",
+       "required": true,
+       "path": "content"
+    }
+  ],
+  "config": {
+  }
 }

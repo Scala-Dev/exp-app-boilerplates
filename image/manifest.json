@@ -1,4 +1,17 @@
 {
-   "name":"Image Player",
-   "icon": "image-area"
+  "name":"Image App",
+  "icon": "image-area",
+  "background": "indigo",
+  "configTypes": [
+    {
+      "name": "image",
+      "type": "image",
+      "multiItem": false,
+      "label": "Add Image",
+      "required": true,
+      "path": "content"
+    }
+  ],
+  "config": {
+  }
 }

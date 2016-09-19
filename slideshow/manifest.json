@@ -1,5 +1,5 @@
 {
-  "name": "Slideshow",
+  "name": "Slideshow App",
   "icon": "image-area",
   "background": "green",
   "configTypes": [
@@ -33,6 +33,10 @@
         {
           "label": "Fade",
           "value": "fade"
+        },
+        {
+          "label": "Pan and Zoom",
+          "value": "panAndZoom"
         }
       ]
     },
@@ -42,7 +46,20 @@
       "multiItem": true,
       "label": "Add Media",
       "required": true,
-      "path": "slides"
+      "path": "slides",
+      "configTypes": [{
+        "type": "duration",
+        "min": 2
+      }],
+      "restriction": [
+        "image",
+        "vector",
+        "video",
+        "composition",
+        "url",
+        "youtube",
+        "app"
+      ]
     },
     {
       "name":"backgroundColor",

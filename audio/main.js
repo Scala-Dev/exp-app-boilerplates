@@ -19,9 +19,16 @@ function unload () {
 function load () {
   audio = document.getElementById('audio');
   return Promise.resolve().then(function () {
+
+    // If loop wasn't explicitly set. Infer from playback context.
+    if (exp.app.config.loop !== true && exp.app.config.loop !== false) {
+      exp.app.config.loop = !exp.app.context.once;
+    }
+    
     if (exp.app.config.loop) {
       audio.setAttribute('loop', ' ');
     }
+
     if (exp.app.config.url) {
       return exp.app.config.url;
     } else if (exp.app.config.content && exp.app.config.content.uuid) {
@@ -40,4 +47,9 @@ function load () {
       audio.addEventListener('canplaythrough', resolve);
     });
   });
+}
+
+
+function stop () {
+  audio.volume = 0;
 }

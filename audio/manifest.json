@@ -1,4 +1,17 @@
 {
-   "name": "Audio Player",
-   "icon": "library-music"
+  "name": "Audio App",
+  "icon": "library-music",
+  "background": "orange",
+  "configTypes": [
+    {
+      "name": "audio",
+      "type": "audio",
+      "multiItem": false,
+      "label": "Add Audio",
+      "required": true,
+      "path": "content"
+    }
+  ],
+  "config": {
+  }
 }

@@ -1,5 +1,5 @@
 {
-   "name":"Social Media Feed",
+   "name":"Social Media App",
    "icon":"share-variant",
    "background":"blue",
    "description":"Displays a social media feed from one of a variety of social networks.",
@@ -13,12 +13,12 @@
          "supportedTypes": [ "scala:feed:instagram", "scala:feed:facebook", "scala:feed:twitter" ]
       },
       {
-        "name": "logo",
-        "type": "image",
-        "multiItem": false,
-        "label": "Add Logo",
-        "required": false,
-        "path": "logo"
+         "name": "logo",
+         "type": "image",
+         "multiItem": false,
+         "label": "Add Logo",
+         "required": false,
+         "path": "logo"
       },
       {
          "name":"title",

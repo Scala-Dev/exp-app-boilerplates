@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <script src="/babel-polyfill.min.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id="launcher"></div>
+    <div id="menu">
+      <img id="logo" src="logo.png">
+      <div id="name">Device Name Unknown</div>
+      <div id="online">Online</div>
+      <div id="offline">Offline</div>
+
+      <div class="popout-wrapper">
+        <div class="title">Organization</div>
+        <div id="organization" class="text">Organization Name Unknown</div>
+      </div>
+      <div class="popout-wrapper">
+        <div class="title">Experience</div>
+        <div id="experience" class="text">Experience Name Unknown</div>
+      </div>
+      <div id="offline-storage" class="popout-wrapper">
+        <div class="title">Offline Storage</div>
+        <div class="text">
+          <div class="bar">
+            <span id="offline-storage-session-bar"></span>
+            <span id="offline-storage-total-bar"></span>
+            <span id="offline-storage-maximum-bar"></span>
+          </div>
+          <div id="offline-storage-text"></div>
+        </div>
+      </div>
+      <div id="unpair" class="button">Unpair</div>
+      <div id="close" class="button">Close</div>
+    </div>
+  </body>
+</html>

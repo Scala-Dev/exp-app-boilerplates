@@ -15,7 +15,6 @@
     {
       "name":"logoId",
       "type":"image",
-      "fileTypes":"image/*",
       "label":"Add Logo",
       "required":false,
       "multiItem": false,

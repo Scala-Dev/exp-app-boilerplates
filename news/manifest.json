@@ -13,13 +13,12 @@
       "supportedTypes": [ "scala:feed:rss" ]
     },
     {
-      "name":"logoId",
-      "type":"image",
-      "fileTypes":"image/*",
-      "label":"Add Logo",
-      "required":false,
+      "name": "logoId",
+      "type": "image",
       "multiItem": false,
-      "path":"logo"
+      "label": "Add Logo",
+      "required": false,
+      "path": "logo"
     },
     {
       "name":"titleTextId",
