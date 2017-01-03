@@ -87,20 +87,10 @@
   ],
   "config": {
     "slides": [
-      { "content": "4fea7234-c997-492a-aeda-9ba2fe69ec28" },
-      { "content": "acf773ec-9f5d-43b4-9dfe-3019baa6abb3" },
-      { "content": "de3a815c-c0ae-4527-b3f4-ddb3ff75c147" },
-      { "content": "b0e8d76c-1f8b-4a52-8642-6cca07cde15f" },
-      { "content": "1f95f8cc-4f83-48d7-b3b4-755d1ba6cfd1" },
-      { "content": "e3042de6-d14d-47b7-8c0f-ec83791f0b3d" },
-      { "content": "9db1dcb2-870a-4a3c-bcfb-49b1d7146f0f" },
-      { "content": "d820cb6d-89ed-4fd6-b0e6-d42f2ff50f45" },
-      { "content": "1e4a146d-96d6-4a29-98a6-119cd90cff41" },
-      { "content": "b002c104-c35f-4df8-9dc5-fafa53325693" }
     ],
     "transition": { "name": "slide" },
     "repeatPercentage": 100,
-    "duration": 5,
+    "duration": 10,
     "backgroundColor": "#000000",
     "viewportColor": "#FFFFFF"
   }
