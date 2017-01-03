@@ -1,0 +1,22 @@
+[app][transition="cube"] {
+  opacity: 0;
+}
+
+[app][transition="cube"][status="playing"]{
+  opacity: 1;
+}
+
+[app][transition="cube"][status="finished"]{
+  opacity: 1;
+}
+
+
+[app][transition="cube"] > div {
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+
+}
