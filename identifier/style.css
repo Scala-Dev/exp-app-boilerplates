@@ -1,4 +1,12 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('Roboto-Light.ttf') format('truetype');
+}
+
 body {
+  font-family: 'Roboto', sans-serif;
   padding: 0;
   margin: 0;
   overflow: hidden;

@@ -1,7 +1,7 @@
 'use strict';
 /* global exp */
 
-let offlineUpdateInterval;
+var offlineUpdateInterval;
 
 function onDeviceOnline () {
   document.getElementById('online').style.display = 'block';
@@ -9,8 +9,8 @@ function onDeviceOnline () {
 }
 
 function onDeviceOffline () {
-  document.getElementById('online').style.visibility = 'none';
-  document.getElementById('offline').style.visibility = 'block';
+  document.getElementById('online').style.display = 'none';
+  document.getElementById('offline').style.display = 'block';
 }
 
 function update () {
@@ -18,18 +18,29 @@ function update () {
     exp.get('/api/organizations/current').then(function (org) {
       document.getElementById('organization').textContent = org.description;
     });
-    exp.getDevice(exp.auth.identity.uuid).then(function (device) {
-      document.getElementById('name').textContent = device.document.name;
-      device.getExperience().then(function (experience) {
-        if (experience && experience.document && experience.document.name) {
-          document.getElementById('experience').textContent = experience.document.name;
-        } else {
-          document.getElementById('experience').textContent = 'No Experience Assigned';
-        }
-      });
+    Promise.resolve().then(function () {
+      if (exp.auth.identity.type === 'device') return exp.getDevice(exp.auth.identity.uuid);
+    }).catch(function () {
+      window.console.warn('Failed to fetch device.');
+    }).then(function (device) {
+      if (device) document.getElementById('name').textContent = device.document.name;
+      else if (exp.auth.identity.type === 'consumerApp') document.getElementById('name').textContent = 'Consumer App';
+      else document.getElementById('name').textContent = 'Unknown';
+      if (exp.player.params.experience) {
+        return exp.getExperience(exp.player.params.experience);
+      } else if (device) {
+        return device.getExperience();
+      }
+    }).catch(function () {
+      window.console.warn('Failed to fetch experience.');
+    }).then(function (experience) {
+      if (experience && experience.document && experience.document.name) {
+        document.getElementById('experience').textContent = experience.document.name;
+      } else {
+        document.getElementById('experience').textContent = 'No Experience Assigned';
+      }
     });
-  }
-  else {
+  } else {
     document.getElementById('organization').textContent = 'Organization Name Unknown';
     document.getElementById('name').textContent = 'Device Name Unknown';
     document.getElementById('experience').textContent = 'Experience Name Unknown';
@@ -110,16 +121,7 @@ window.load = function () {
   launcher.onmousedown = open;
   launcher.ontouchstart = open;
   document.getElementById('close').onclick = close;
-  document.getElementById('unpair').onclick = function () {
-    localStorage.setItem('auth', '');
-    exp.player.options.set('uuid', '');
-    exp.player.options.set('secret', '');
-    return exp.player.options.save().then(function () {
-      if (exp.player.offline) return exp.player.offline.clear();
-    }).catch(function () {}).then(function () {
-      return exp.player.restart(new Error('Player was unpaired.'));
-    });
-  };
+  document.getElementById('unpair').onclick = function () { exp.player.unpair(); };
   exp.on('offline', onDeviceOffline);
   exp.on('online', onDeviceOnline);
   update();

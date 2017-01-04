@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+  <script src="/babel-polyfill.min.js"></script>
+  <link href='roboto.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="vendor/lodash.min.js" type="text/javascript"></script>
+  <script src="scripts/weatherData.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="maxSize" id="weatherWrapper">
+  <div class="top">
+    <img id="logoContainer" class="image">
+    <span class="titleFormat" id="titleText"></span>
+  </div>
+  <div class="middle">
+    <div class="currentWeatherIconContainer">
+      <div class="top">
+        <span class="textFormat" id="locationText"></span>
+      </div>
+      <div class="bottom">
+        <object type="image/svg+xml" id="currentWeatherIcon" class="currentWeatherIcon"></object>
+      </div>
+    </div>
+    <div class="currentWeatherTempContainer">
+      <span class="textFormat" id="currentTempText"></span>
+    </div>
+    <div class="currentWeatherConditionsContainer">
+      <div class="container">
+        <div class="conditionsContainer">
+
+            <span>
+              <object type="image/svg+xml" class="humidity" id="humidityIcon" data="assets/conditions/humidity.svg"></object>
+            </span>
+          <span id="humidityText"></span>
+            <span>
+              <object type="image/svg+xml" class="windSpeed" id="windSpeedIcon" data="assets/conditions/windSpeed.svg"></object>
+            </span>
+          <span id="windSpeedText"></span>
+            <span>
+              <object type="image/svg+xml" class="windDirection" id="windDirectionIcon" data="assets/conditions/windDirection.svg"></object>
+            </span>
+          <span id="windDirectionText"></span>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="container">
+      <div class="top">
+        <span id="date1" class="text"></span>
+      </div>
+      <div class="middle" >
+        <object id="iconForecastDay1" class="iconForecastDay" type="image/svg+xml"></object>
+      </div>
+      <div class="bottom">
+        <span id="temp1" class="text"></span>
+      </div>
+    </div>
+    <div class="container">
+      <div class="top">
+        <span id="date2" class="text"></span>
+      </div>
+      <div class="middle">
+        <object id="iconForecastDay2" class="iconForecastDay" type="image/svg+xml"></object>
+      </div>
+      <div class="bottom">
+        <span id="temp2" class="text"></span>
+      </div>
+    </div>
+    <div class="container">
+      <div class="top">
+        <span id="date3" class="text"></span>
+      </div>
+      <div class="middle">
+        <object id="iconForecastDay3" class="iconForecastDay" type="image/svg+xml"></object>
+      </div>
+      <div class="bottom">
+        <span id="temp3" class="text"></span>
+      </div>
+    </div>
+    <div class="container">
+      <div class="top">
+        <span id="date4" class="text"></span>
+      </div>
+      <div class="middle">
+        <object id="iconForecastDay4" class="iconForecastDay" type="image/svg+xml"></object>
+      </div>
+      <div class="bottom">
+        <span id="temp4" class="text"></span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="maxSize errorStyle" id="errorWrapper">
+  <div class="errorMesssage">
+    <h1>Well, this is embarrassing.<h1>
+      <h2>The Weather App is having trouble retrieving data.</h2>
+      <h2>Please check that the weather feed is configured correctly and/or the device has a valid location.</h2>
+  </div>
+</div>
+</body>
+</html>
