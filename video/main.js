@@ -7,7 +7,7 @@ var video;
 function play () {
   return new Promise(function (resolve, reject) {
     video.play();
-    video.addEventListener('error', reject);
+    video.addEventListener('error', function(e) { reject(e.target.error); });
     video.addEventListener('ended', resolve);
   });
 }
@@ -24,7 +24,7 @@ function load () {
     if (exp.app.config.loop !== true && exp.app.config.loop !== false) {
       exp.app.config.loop = !exp.app.context.once;
     }
-    
+
     if (exp.app.config.loop) {
       video.setAttribute('loop', ' ');
     }
@@ -48,8 +48,9 @@ function load () {
     return new Promise (function (resolve, reject) {
       video.setAttribute('src', src);
       if (exp.app.config && (exp.app.config.volume || exp.app.config.volume === 0)) video.volume = exp.app.config.volume;
-      video.addEventListener('error', reject);
+      video.addEventListener('error', function(e) { reject(e.target.error); });
       video.addEventListener('canplaythrough', resolve);
+      video.load();
     });
   });
 }

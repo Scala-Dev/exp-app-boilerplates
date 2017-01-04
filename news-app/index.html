@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NEWS APP</title>
+  <script src="/babel-polyfill.min.js"></script>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="vendor/vue.min.js"></script>
+  <script type="text/javascript" src="vendor/moment.min.js"></script>
+  <script type="text/javascript" src="vendor/vue-moment.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</head>
+<body id="newsApp" style="{{ style }}">
+<div class="container">
+
+  <template v-if=" logo !== '' || titleText !== '' ">
+    <div class="heading">
+      <div class="titleContainer">
+        <div>
+          <span class="header">{{ titleText }}</span>
+        </div>
+        <div>
+          <img src="{{ logo }}" class="logoImage">
+        </div>
+      </div>
+      <div>
+        <hr style="{{ lineColor }}" size="5" noshade>
+      </div>
+    </div>
+  </template>
+
+  <div class="newspaper">
+    <div v-for="item in rssData.items" class="items">
+      <div>
+        <span class="date">{{ item.date | moment "dddd, MMMM Do YYYY" }}</span>
+      </div>
+      <div>
+        <span class="title">{{{ item.text }}}</span>
+      </div>
+      <template v-if="item.images.length !== 0">
+        <div class="imageContainer">
+          <img v-bind:src="item.images[0].url" class="image">
+        </div>
+      </template>
+      <div class="textContainer">
+        <span class="text">{{{ item.metadata.description }}}</span>
+      </div>
+      <div>
+        <hr style="{{ lineColor }}" size="3" noshade>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
