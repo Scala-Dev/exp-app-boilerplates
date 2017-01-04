@@ -60,7 +60,7 @@ The following is a list of UUIDs for each global app in EXP. These apps are avai
 |menuboard|5299680e-80b0-404b-baa1-9a414365dfef|
 |news|34026b40-f721-11e5-9ce9-5e5517507c66|
 |pairing|5e9a5aaf-7a03-4651-8c73-8675635dcf88|
-|slideshow|e115f1d3-f5a8-4151-9428-a995435eacaa|
+|playlist|e115f1d3-f5a8-4151-9428-a995435eacaa|
 |social|c3584db2-508a-43ba-90f7-e14ef2000baf|
 |video|1290126c-a06d-4520-a547-1719c48aa9eb|
 |weather|b1e38132-5911-4b16-b2ad-30600b8298c8|
