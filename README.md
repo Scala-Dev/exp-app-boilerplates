@@ -52,6 +52,7 @@ The following is a list of UUIDs for each global app in EXP. These apps are avai
 | App Template | UUID |
 |--------------|------|
 |audio|3415bd0b-f567-4f53-896a-2344b24645be|
+|dayplan|4d0d80e8-fdba-46a2-8a54-90fdab96390d|
 |embed|f2520731-8973-4cc6-bba1-87ba1fe17555|
 |fling|1b21ec6e-0b96-4089-bed8-0c6f36114916|
 |identifier|ef6e7796-a37e-4d30-b992-60e2e787e66d|
@@ -61,7 +62,8 @@ The following is a list of UUIDs for each global app in EXP. These apps are avai
 |news|34026b40-f721-11e5-9ce9-5e5517507c66|
 |pairing|5e9a5aaf-7a03-4651-8c73-8675635dcf88|
 |playlist|e115f1d3-f5a8-4151-9428-a995435eacaa|
-|social|c3584db2-508a-43ba-90f7-e14ef2000baf|
+|schedule|a2eee36c-0171-4d36-9e5d-04850c7c56b3|
+|social-feed|c3584db2-508a-43ba-90f7-e14ef2000baf|
 |video|1290126c-a06d-4520-a547-1719c48aa9eb|
-|weather|b1e38132-5911-4b16-b2ad-30600b8298c8|
+|weather-app|b1e38132-5911-4b16-b2ad-30600b8298c8|
 |youtube|16215708-0471-4b61-8ead-3e5dbe34c2a1|
