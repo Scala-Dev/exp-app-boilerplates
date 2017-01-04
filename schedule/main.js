@@ -37,22 +37,37 @@ function getCurrentRecurrence () {
   return recurrences.find(function (recurrence) { return recurrence.rrule.between(start, end).length > 0; });
 }
 
-function playForever (key) {
-  return exp.player.play({ key: key }).catch(function() {}).then(function() {
+function playForever (key, app) {
+  Promise.resolve().then(function () {
+    if (app) {
+      return app.play();
+    } else {
+      return exp.player.play({ key: key });
+    }
+  }).catch(function (error) {
+    window.console.warn('Schedule failed to play scheduled app.', error);
+  }).then(function() {
     setTimeout(function() { return playForever(key); }, 5000);
   });
 }
 
+var app, key;
+
 window.load = function () {
-  exp.app.element.style.display = 'none';
+  var recurrence = getCurrentRecurrence();
+  return Promise.resolve().then(function () {
+    if (recurrence) {
+      key = recurrence.appKey || recurrence.dayplanKey;
+      return exp.player.load({ key: key }).then(function (app_) {
+        app = app_;
+      });
+    } else {
+      window.console.warn('Nothing scheduled today.');
+    }
+  });
 };
 
 window.play = function () {
-  var recurrence = getCurrentRecurrence();
-  if (recurrence) {
-    playForever(recurrence.appKey);
-  } else {
-    window.console.warn('Nothing scheduled today.');
-  }
+  if (app) playForever(key, app);
   return new Promise(function (resolve) { setTimeout(resolve, 86400 * 1000 - getTime()); });
 };

@@ -1,0 +1,27 @@
+{
+  "name": "jQueryKeyframes",
+  "version": "0.0.9",
+  "homepage": "https://github.com/jQueryKeyframes/jQuery.Keyframes",
+  "license": "MIT",
+  "private": false,
+  "main": "./jquery.keyframes.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "package.json"
+  ],
+  "dependencies": {
+    "jquery": "latest",
+    "prefixfree": "latest"
+  },
+  "_release": "0.0.9",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.9",
+    "commit": "42459d50f8f425701eaed832f1804bd5651123e2"
+  },
+  "_source": "git://github.com/krazyjakee/jQuery.Keyframes.git",
+  "_target": "~0.0.9",
+  "_originalSource": "jquerykeyframes"
+}

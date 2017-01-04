@@ -7,7 +7,7 @@ var audio;
 function play () {
   return new Promise(function (resolve, reject) {
     audio.play();
-    audio.addEventListener('error', reject);
+    audio.addEventListener('error', function(e) { reject(e.target.error); });
     audio.addEventListener('ended', resolve);
   });
 }
@@ -24,7 +24,7 @@ function load () {
     if (exp.app.config.loop !== true && exp.app.config.loop !== false) {
       exp.app.config.loop = !exp.app.context.once;
     }
-    
+
     if (exp.app.config.loop) {
       audio.setAttribute('loop', ' ');
     }
@@ -43,8 +43,9 @@ function load () {
     return new Promise (function (resolve, reject) {
       audio.setAttribute('src', src);
       if (exp.app.config && (exp.app.config.volume || exp.app.config.volume === 0)) audio.volume = exp.app.config.volume;
-      audio.addEventListener('error', reject);
+      audio.addEventListener('error', function(e) { reject(e.target.error); });
       audio.addEventListener('canplaythrough', resolve);
+      audio.load();
     });
   });
 }
