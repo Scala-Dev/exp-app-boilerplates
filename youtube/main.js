@@ -50,6 +50,7 @@ function load () {
     var options = {};
     options.id = videoId;
     options.loop = exp.app.config.loop ? 1 : 0;
+    options.captions = exp.app.config.captions ? 1 : 0;
     loadResolve(options);
     const script = document.createElement('script');
     script.setAttribute('src', 'https://www.youtube.com/iframe_api');
@@ -92,6 +93,7 @@ function onYouTubeIframeAPIReady() {
         iv_load_policy: 3,
         rel: 0,
         loop: options.loop,
+        cc_load_policy: options.captions,
         origin: 'http://' + window.location.host,
         playlist: options.id
       },

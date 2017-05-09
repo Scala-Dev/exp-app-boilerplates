@@ -1,7 +1,7 @@
 {
   "name":"News App",
   "icon":"newspaper",
-  "description":"Displays news information from RSS feeds.",
+  "description":"Displays news information from an RSS feed.",
   "background":"red",
   "configTypes":[
     {

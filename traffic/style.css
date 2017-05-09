@@ -1,0 +1,48 @@
+/* import Roboto Medium */
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/Roboto-Regular.woff2?v=1.1.0") format("woff2"), url("./fonts/Roboto-Regular.woff?v=1.1.0") format("woff"), url("./fonts/Roboto-Regular.ttf?v=1.1.0") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/Roboto-Regular.woff2?v=1.1.0") format("woff2"), url("./fonts/Roboto-Regular.woff?v=1.1.0") format("woff"), url("./fonts/Roboto-Regular.ttf?v=1.1.0") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Main styles */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #7E57C2;
+    background-color: #FFF
+}
+
+#map {
+    height: 100%;
+}
+
+#title {
+    position: fixed;
+    font-size: 40px;
+    text-align: center;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 20px;
+    z-index: 9;
+    display: block;
+    width: 100%;
+    height: auto;
+    font-weight: 400;
+}

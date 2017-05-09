@@ -1,6 +1,7 @@
 {
   "name": "Playlist App",
   "icon": "image-area",
+  "description": "Plays one or more apps, one after another, with options for transition animation and duration to play apps.",
   "background": "green",
   "configTypes": [
     {

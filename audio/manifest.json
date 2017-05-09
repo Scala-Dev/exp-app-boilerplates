@@ -1,6 +1,7 @@
 {
   "name": "Audio App",
   "icon": "library-music",
+  "description": "Plays an audio file.",
   "background": "orange",
   "configTypes": [
     {

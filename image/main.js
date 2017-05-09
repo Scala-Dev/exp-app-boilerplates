@@ -24,6 +24,24 @@ function load () {
     }
   }).then(function (src) {
     return new Promise (function (resolve, reject) {
+      switch(exp.app.config.scaleToFit) {
+        case 'both':
+          document.getElementById('img').classList.add('scale-both');
+          break;
+        case 'width':
+          document.getElementById('img').classList.add('scale-width');
+          break;
+        default:
+          document.getElementById('img').classList.add('scale-height');
+      }
+
+      if (exp.app.config.blurredBackground) {
+          var div = document.createElement('div');
+          div.id = 'background-blurred';
+          div.style.backgroundImage = 'url("'+src+'")';
+          document.body.appendChild(div);
+      }
+
       document.getElementById('img').setAttribute('src', src);
       document.getElementById('img').onload = resolve;
       setTimeout(function () { reject(new Error('Image load timed out.')); }, 10000);

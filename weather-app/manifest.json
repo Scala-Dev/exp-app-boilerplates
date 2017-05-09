@@ -1,7 +1,7 @@
 {
   "name":"Weather App",
   "icon":"weather-partlycloudy",
-  "description":"Displays a weather feed from wunderground.",
+  "description":"Displays a weather feed from Weather Underground (wunderground.com).",
   "background":"yellow",
   "configTypes":[
     {
@@ -12,6 +12,23 @@
       "dynamic": true,
       "path":"feedConfiguration",
       "restriction": [ "scala:feed:weather" ]
+    },
+    {
+      "name": "locationSource",
+      "type": "select",
+      "required": true,
+      "label": "Location source (dynamic fallback)",
+      "path": "locationSource",
+      "options": [
+        {
+          "label": "Device",
+          "value": "geolocation"
+        },
+        {
+          "label": "EXP",
+          "value": "navigator"
+        }
+      ]
     },
     {
       "name":"logoId",
@@ -31,14 +48,14 @@
     {
       "name":"primaryColorId",
       "type":"color",
-      "label":"Primary Color",
+      "label":"Background Color",
       "required":true,
       "path":"primaryColor"
     },
     {
       "name":"textColorId",
       "type":"color",
-      "label":"Secondary Color",
+      "label":"Text Color",
       "required":true,
       "path":"textColor"
     },
@@ -77,41 +94,20 @@
       ]
     },
     {
-      "name":"dateFormatId",
-      "type":"select",
-      "label":"Date Format",
-      "required":true,
-      "path":"dateFormat",
-      "options":[
-        {
-          "label":"Day of Week (Sunday - Saturday)",
-          "value":"EEEE"
-        },
-        {
-          "label":"US Date, (MM/DD/YYYY)",
-          "value":"MM/dd/yyyy"
-        },
-        {
-          "label":"EU Date (DD-MM-YYYY)",
-          "value":"dd-MM-yyyy"
-        }
-      ]
-    },
-    {
       "name":"refreshRateSecondsId",
       "type":"number",
-      "min": 2,
+      "min": 10,
       "label":"Refresh Rate (seconds)",
       "required":true,
       "path":"refreshRateSeconds"
     }
   ],
   "config":{
+    "locationSource": "exp",
     "primaryColor": "#7E57C2",
     "textColor": "#ffffff",
     "temperature": "f",
     "measurements": "imperial",
-    "dateFormat": "MM/dd/yyyy",
     "refreshRateSeconds": 600
   }
 }
