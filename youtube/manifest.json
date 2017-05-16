@@ -1,6 +1,7 @@
 {
-  "name":"Youtube App",
+  "name":"Youtube",
   "icon":"youtube-play",
+  "description": "Plays a youtube video, with option to turn on or off captions.",
   "background": "red",
   "configTypes": [
     {
@@ -11,8 +12,15 @@
       "required": true,
       "path": "content",
       "restriction": ["youtube"]
+    },
+    {
+      "name": "captions",
+      "type": "checkbox",
+      "label": "Show Captions if Available",
+      "path": "captions"
     }
   ],
   "config": {
+    "captions": false 
   }
 }

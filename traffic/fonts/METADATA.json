@@ -1,0 +1,30 @@
+{
+  "name": "Roboto",
+  "designer": "Christian Robertson",
+  "license": "Apache2",
+  "visibility": "External",
+  "category": "Sans Serif",
+  "size": 86523,
+  "fonts": [
+    {
+      "name": "Roboto",
+      "style": "normal",
+      "weight": 400,
+      "filename": "Roboto-Regular.ttf",
+      "postScriptName": "Roboto-Regular",
+      "fullName": "Roboto",
+      "copyright": "Copyright 2011 Google Inc. All Rights Reserved."
+    }
+  ],
+  "subsets": [
+    "cyrillic",
+    "cyrillic-ext",
+    "greek",
+    "greek-ext",
+    "latin",
+    "latin-ext",
+    "menu",
+    "vietnamese"
+  ],
+  "dateAdded": "2013-01-09"
+}

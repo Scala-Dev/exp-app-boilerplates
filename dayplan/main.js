@@ -19,10 +19,31 @@ function setSyncTimeout (now, target) {
 function setSyncTimeouts () {
   var now = getTime();
   sequence.forEach(function (item) {
+
+    setSyncTimeout(now, item.block.startTime - 3000);
+    setSyncTimeout(now, item.block.startTime - 1500);
     setSyncTimeout(now, item.block.startTime);
+    setSyncTimeout(now, item.block.startTime + 1500);
+    setSyncTimeout(now, item.block.startTime + 3000);
+
+    setSyncTimeout(now, item.block.endTime - 3000);
+    setSyncTimeout(now, item.block.endTime - 1500);
     setSyncTimeout(now, item.block.endTime);
+    setSyncTimeout(now, item.block.endTime + 1500);
+    setSyncTimeout(now, item.block.endTime + 3000);
+
+    setSyncTimeout(now, item.block.startTime + 86400 * 1000 - 3000);
+    setSyncTimeout(now, item.block.startTime + 86400 * 1000 - 1500);
     setSyncTimeout(now, item.block.startTime + 86400 * 1000);
+    setSyncTimeout(now, item.block.startTime + 86400 * 1000 + 1500);
+    setSyncTimeout(now, item.block.startTime + 86400 * 1000 + 3000);
+
+    setSyncTimeout(now, item.block.endTime + 86400 * 1000 - 3000);
+    setSyncTimeout(now, item.block.endTime + 86400 * 1000 - 1500);
     setSyncTimeout(now, item.block.endTime + 86400 * 1000);
+    setSyncTimeout(now, item.block.endTime + 86400 * 1000 + 1500);
+    setSyncTimeout(now, item.block.endTime + 86400 * 1000 + 3000);
+
   });
 }
 
@@ -52,9 +73,7 @@ function loadItem (item) {
     loadResolve();
     return app;
   }, function (error) {
-    delete item.promise;
-    window.console.warn('Child application failed to load.', error);
-    setTimeout(sync, 5000);
+    exp.app.abort(error);
   });
 }
 
@@ -67,9 +86,7 @@ function playItem (item) {
       window.console.info('Child application playback finished.');
       setTimeout(sync, 0);
     }, function (error) {
-      delete item.promise;
-      window.console.warn('Child application playback failed.', error);
-      setTimeout(sync, 5000);
+      exp.app.abort(error);
     });
   });
 }

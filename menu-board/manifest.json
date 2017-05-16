@@ -1,7 +1,7 @@
 {
   "name":"Menu Board App",
   "icon":"menu",
-  "description":"Displays POS data from POS feed.",
+  "description":"Displays POS data from a POS feed.",
   "configTypes":[
     {
       "name":"feed",

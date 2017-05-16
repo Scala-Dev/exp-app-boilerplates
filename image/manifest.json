@@ -1,6 +1,7 @@
 {
   "name":"Image App",
   "icon": "image-area",
+  "description": "Displays an image with options for scaling and a generative background.",
   "background": "indigo",
   "configTypes": [
     {
@@ -10,8 +11,36 @@
       "label": "Add Image",
       "required": true,
       "path": "content"
+    },
+    {
+      "name":"scaleToFit",
+      "type":"select",
+      "label":"Scale to Fit",
+      "path":"scaleToFit",
+      "options":[
+        {
+          "label":"Width",
+          "value":"width"
+        },
+        {
+          "label":"Height",
+          "value":"height"
+        },
+        {
+          "label":"Both",
+          "value":"both"
+        }
+      ]
+    },
+    {
+      "name":"blurredBackground",
+      "type":"checkbox",
+      "label":"Blurred Background",
+      "path":"blurredBackground"
     }
   ],
   "config": {
+    "scaleToFit":"height",
+    "blurredBackground": false
   }
 }

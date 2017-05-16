@@ -1,0 +1,10 @@
+<div class="future-day" layout="row" layout-align="start center" layout-wrap flex="100">
+  <span class="day-of-week future-day-info" layout="row" layout-align="center">{{ DayCtrl.date | date : 'EEE' }}</span>
+  <span class="weather-icon-wrapper future-day-info" layout="row" layout-align="center"><md-icon class="weather-icon" md-svg-src="{{ DayCtrl.weatherIcon | expWeatherIcon }}"></md-icon></span>
+  <span class="temp-low-high-container future-day-info" layout="row" layout-align="center">
+    <span class="temp-high">{{ DayCtrl.high | expTemperature }}</span>
+    <span class="temp-divider"></span>
+    <span class="temp-low">{{ DayCtrl.low | expTemperature }}</span>
+  </span>
+  <div class="future-days-divider config-text-color"></div>
+</div>

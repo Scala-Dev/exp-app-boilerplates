@@ -2,7 +2,7 @@
    "name":"Social Media App",
    "icon":"share-variant",
    "background":"blue",
-   "description":"Displays a social media feed from one of a variety of social networks.",
+   "description":"Displays a social media feed.",
    "configTypes":[
       {
          "name":"feed",

@@ -1,0 +1,45 @@
+{
+  "name":"Layers App",
+  "icon": "arrange-bring-forward",
+  "description": "Plays two apps simultaneously, one on top of the other, with the option to hide the background app entirely or set the foreground app's opacity.",
+  "background": "red",
+  "configTypes": [
+    {
+      "name": "foregroundApp",
+      "type": "appArray",
+      "multiItem": false,
+      "label": "Foreground",
+      "required": true,
+      "path": "foregroundApp"
+    },
+    {
+      "name": "foregroundOpacity",
+      "type": "number",
+      "label": "Foreground Opacity",
+      "path": "foregroundOpacity",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "backgroundApp",
+      "type": "appArray",
+      "multiItem": false,
+      "label": "Background",
+      "required": true,
+      "path": "backgroundApp"
+    },
+    {
+      "name": "hideBackgroundApp",
+      "type": "checkbox",
+      "label": "Hide Background App",
+      "path": "hideBackgroundApp"
+    }
+  ],
+  "config": {
+    "foregroundApp": [],
+    "backgroundApp": [],
+    "hideBackgroundApp": false,
+    "foregroundOpacity": 1
+  }
+}
+

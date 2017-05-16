@@ -1,0 +1,91 @@
+{
+  "name": "Traffic App",
+  "icon": "image-area",
+  "description": "Displays traffic information for a given location using Google Maps.",
+  "background": "blue",
+  "configTypes": [
+    {
+      "name": "text",
+      "type": "text",
+      "label": "Map Title",
+      "path": "mapTitle"
+    },
+    {
+      "name": "color",
+      "type": "color",
+      "label": "Title Color",
+      "path": "titleColor"
+    },
+    {
+      "name": "text",
+      "type": "text",
+      "label": "Google Maps API Key",
+      "path": "googleMapsApiKey",
+      "required": true
+    },
+    {
+      "name": "slider",
+      "type": "slider",
+      "label": "Map Zoom",
+      "path": "mapZoom",
+      "min": 8,
+      "max": 16,
+      "required": true
+    },
+    {
+      "name": "checkbox",
+      "type": "checkbox",
+      "label": "Hide Default Map Controls",
+      "path": "hideControls"
+    },
+    {
+      "name": "select",
+      "type": "select",
+      "label": "Get Location From...",
+      "path": "deviceLocation",
+      "options": [
+        {
+          "label": "Device",
+          "value": "geolocation"
+        },
+        {
+          "label": "EXP",
+          "value": "exp"
+        }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "select",
+      "label": "Map Style",
+      "path": "mapStyle",
+      "options": [
+        {
+          "label": "Roadmap",
+          "value": "roadmap"
+        },
+        {
+          "label": "Satellite",
+          "value": "hybrid"
+        }
+      ]
+    },
+    {
+      "name": "pollInterval",
+      "type": "slider",
+      "label": "Refresh Rate (in seconds)",
+      "path": "pollInterval",
+      "min": 60,
+      "max": 3600,
+      "required": true
+    }
+  ],
+  "config": {
+    "hideControls": true,
+    "titleColor": "rgb(126, 87, 194)",
+    "mapZoom": 13,
+    "deviceLocation": "geolocation",
+    "mapStyle": "roadmap",
+    "pollInterval": 300
+  }
+}

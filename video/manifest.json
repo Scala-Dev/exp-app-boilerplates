@@ -1,6 +1,7 @@
 {
   "name": "Video App",
   "icon": "video",
+  "description": "Plays a video file, with option for a captions track.",
   "background": "deep-purple",
   "configTypes": [
     {
@@ -10,6 +11,15 @@
        "label": "Add Video",
        "required": true,
        "path": "content"
+    },
+    {
+      "name": "captionsTrack",
+      "type": "content",
+      "restriction": ["file"],
+      "multiItem": false,
+      "label": "Captions File",
+      "required": false,
+      "path": "captionsTrack"
     }
   ],
   "config": {

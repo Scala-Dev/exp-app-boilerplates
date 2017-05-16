@@ -1,0 +1,72 @@
+{
+  "name": "Split Screen App",
+  "icon": "layout-split",
+  "description": "Plays two apps simultaneously on a split screen, with option for either vertical or horizontal split, and for percentage of screen that goes to each app.",
+  "background": "teal",
+  "configTypes": [
+    {
+      "name": "orientation",
+      "type": "select",
+      "label": "Orientation",
+      "required": true,
+      "path": "orientation",
+      "options": [
+        {
+          "label": "Side by Side",
+          "value": "vertical"
+        },
+        {
+          "label": "Top and Bottom",
+          "value": "horizontal"
+        }
+      ]
+    },
+    {
+      "name": "size",
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "label": "Size (percentage of first region)",
+      "required": true,
+      "path": "size"
+    },
+    {
+      "name": "region1",
+      "type": "appArray",
+      "multiItem": false,
+      "label": "First Region",
+      "required": true,
+      "path": "region1",
+      "restriction": [
+        "image",
+        "vector",
+        "video",
+        "composition",
+        "url",
+        "youtube",
+        "app"
+      ]
+    },
+    {
+      "name": "region2",
+      "type": "appArray",
+      "multiItem": false,
+      "label": "Second Region",
+      "required": true,
+      "path": "region2",
+      "restriction": [
+        "image",
+        "vector",
+        "video",
+        "composition",
+        "url",
+        "youtube",
+        "app"
+      ]
+    }
+  ],
+  "config": {
+    "orientation": "vertical",
+    "size": 50
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "name": "Ticker App",
+  "icon": "trending-up",
+  "background": "cyan",
+  "configTypes": [
+    {
+      "name": "feed",
+      "type": "feed",
+      "label": "Ticker Feed",
+      "path": "feed",
+      "required": false
+    },
+    {
+      "name": "scrollSpeed",
+      "type": "slider",
+      "label": "Scroll Speed",
+      "step": 5,
+      "min": 0,
+      "max": 200,
+      "path": "scrollSpeed",
+      "required": true
+    },
+    {
+      "name": "buffer",
+      "type": "slider",
+      "label": "Buffer Between Items (percent of screen)",
+      "step": 5,
+      "min": 0,
+      "max": 100,
+      "path": "buffer",
+      "required": true
+    },
+    {
+      "name": "font",
+      "type": "select",
+      "label": "Font",
+      "required": true,
+      "path": "font",
+      "options": [{
+        "label": "Arial",
+        "value": "Arial"
+      }, {
+        "label": "Comic Sans MS",
+        "value": "Comic Sans MS"
+      }, {
+        "label": "Courier",
+        "value": "Courier"
+      }, {
+        "label": "Georgia",
+        "value": "Georgia"
+      }, {
+        "label": "Hoefler Text",
+        "value": "Hoefler Text"
+      }, {
+        "label": "Impact",
+        "value": "Impact"
+      }, {
+        "label": "Inconsolata",
+        "value": "Inconsolata"
+      }, {
+        "label": "Monaco",
+        "value": "Monaco"
+      }, {
+        "label": "Myriad Pro",
+        "value": "Myriad Pro"
+      }, {
+        "label": "Optima",
+        "value": "Optima"
+      }, {
+        "label": "Times New Roman",
+        "value": "Times New Roman"
+      }, {
+        "label": "Verdana",
+        "value": "Verdana"
+      }]
+    },
+    {
+      "name": "fontColor",
+      "type": "color",
+      "label": "Font Color",
+      "required": true,
+      "path": "fontColor"
+    },
+    {
+      "name": "backgroundColor",
+      "type": "color",
+      "label": "Background Color",
+      "required": true,
+      "path": "backgroundColor"
+    }
+  ],
+  "config": {
+    "scrollSpeed": 50,
+    "buffer": 25,
+    "font": "Monaco",
+    "fontColor": "#7e57c2",
+    "backgroundColor": "#ffffff"
+  }
+}
