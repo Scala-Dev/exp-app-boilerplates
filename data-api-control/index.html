@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="vendor/jsoneditor/dist/jsoneditor.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="/babel-polyfill.min.js"></script>
+    <script src="vendor/angular/angular.min.js" type="text/javascript"></script>
+    <script src="vendor/angular-material/angular-material.min.js" type="text/javascript"></script>
+    <script src="vendor/angular-aria/angular-aria.js" type="text/javascript"></script>
+    <script src="vendor/angular-animate/angular-animate.min.js" type="text/javascript"></script>
+    <script src="vendor/angular-messages/angular-messages.min.js" type="text/javascript"></script>
+    <script src="vendor/jsoneditor/dist/jsoneditor.min.js"></script>
+    <script src="vendor/ng-jsoneditor/ng-jsoneditor.js"></script>
+
+    <script src="scripts/app.js" type="text/javascript"></script>
+    <script src="scripts/exp.factory.js" type="text/javascript"></script>
+    <script src="scripts/selector.controller.js" type="text/javascript"></script>
+    <script src="scripts/new.controller.js" type="text/javascript"></script>
+    <script src="scripts/main.controller.js" type="text/javascript"></script>
+    <script src="main.js" type="text/javascript"></script>
+  </head>
+  <body ng-controller="mainController" ng-cloak>
+    <md-toolbar class="toolbar">
+      <div class="md-toolbar-tools">
+        <md-menu>
+          <md-button class="md-icon-button" aria-label="Menu" ng-click="$mdMenu.open(ev);">
+            <md-icon ng-bind="'menu'"></md-icon>
+          </md-button>
+          <md-menu-content width="4">
+            <md-menu-item>
+              <md-button ng-click="select($event)">
+                <md-icon ng-bind="'description'" md-menu-align-target></md-icon>
+                SELECTOR
+              </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button ng-click="save();" ng-disabled="firstRun">
+                <md-icon ng-bind="'save'" md-menu-align-target></md-icon>
+                SAVE
+              </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button ng-click="delete($event)" ng-disabled="firstRun">
+                <md-icon ng-bind="'delete'" md-menu-align-target></md-icon>
+                DELETE
+              </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button ng-click="newEntry($event)">
+                <md-icon ng-bind="'open_in_new'" md-menu-align-target></md-icon>
+                NEW
+              </md-button>
+            </md-menu-item>
+            <md-divider></md-divider>
+            <md-menu-item>
+              <md-button ng-click="reload()">
+                <md-icon ng-bind="'autorenew'" md-menu-align-target></md-icon>
+                RELOAD
+              </md-button>
+            </md-menu-item>
+          </md-menu-content>
+        </md-menu>
+        <h2>DATA API EDITOR {{selectedText | uppercase}}</h2>
+        <div flex></div>
+        <h2>{{organization | uppercase}}</h2>
+        <md-menu>
+          <md-button class="md-icon-button" aria-label="More Options" ng-click="$mdMenu.open(ev);">
+            <md-icon ng-bind="'more_vert'"></md-icon>
+          </md-button>
+          <md-menu-content width="4">
+            <md-menu-item>
+              <md-button ng-click="modeSelect('tree')" ng-disabled="firstRun">
+                <md-icon ng-bind="'linear_scale'" md-menu-align-target></md-icon>
+                TREE MODE
+              </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button ng-click="modeSelect('code')" ng-disabled="firstRun">
+                <md-icon ng-bind="'code'" md-menu-align-target></md-icon>
+                CODE MODE
+              </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button ng-click="modeSelect('text')" ng-disabled="firstRun">
+                <md-icon ng-bind="'short_text'" md-menu-align-target></md-icon>
+                TEXT MODE
+              </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button ng-click="modeSelect('view')">
+                <md-icon ng-bind="'visibility'" md-menu-align-target></md-icon>
+                READ ONLY MODE
+              </md-button>
+            </md-menu-item>
+          </md-menu-content>
+        </md-menu>
+      </div>
+    </md-toolbar>
+    <div ng-jsoneditor="editorLoaded" ng-model="config.data" options="config.options" class="editor"></div>
+  </body>
+</html>

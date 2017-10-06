@@ -1,0 +1,42 @@
+<md-dialog aria-label="DATA ENTRY" class="dialogContainer">
+    <form ng-cloak name="dataEntry">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>NEW DATA ENTRY</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon ng-bind="'close'" aria-label="Close Dialog"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                <md-input-container class="md-block">
+                    <label>GROUP</label>
+                    <input required name="group" ng-model="newData.group">
+                    <div ng-messages="dataEntry.group.$error">
+                        <div ng-message="required">This is required.</div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>KEY</label>
+                    <input required name="key" ng-model="newData.key">
+                    <div ng-messages="dataEntry.key.$error">
+                        <div ng-message="required">This is required.</div>
+                    </div>
+                </md-input-container>
+            </div>
+        </md-dialog-content>
+
+        <md-dialog-actions layout="row">
+            <span flex></span>
+            <md-button ng-click="add()" class="md-raised md-primary">
+                Add
+            </md-button>
+            <md-button ng-click="cancel()" class="md-raised">
+                Close
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>
